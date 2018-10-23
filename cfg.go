@@ -11,8 +11,6 @@
 //
 package cfg
 
-////////////////////////////////////////////////////////////////////////////////
-
 import (
 	"encoding/json"
 	"fmt"
@@ -21,10 +19,8 @@ import (
 	"strings"
 )
 
-////////////////////////////////////////////////////////////////////////////////
-
-// parseTag takes a cfg tag and returns the Key we are looking for and a boolean to
-// indicate if the key is a required value or not.
+// parseTag takes a cfg tag and returns the Key we are looking for and a boolean
+// to indicate if the key is a required value or not.
 func parseTag(tag string) (string, bool) {
 	key := ""
 	req := false
@@ -39,8 +35,6 @@ func parseTag(tag string) (string, bool) {
 
 	return key, req
 }
-
-////////////////////////////////////////////////////////////////////////////////
 
 // Load looks for a valid config file at `path` and if found, attempts to load
 // it into memory.  Then it searches the interface{} `v` for any `cfg` tags and
@@ -92,5 +86,3 @@ func Load(path string, v interface{}) error {
 
 	return nil
 }
-
-////////////////////////////////////////////////////////////////////////////////
